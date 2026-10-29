@@ -124,7 +124,8 @@ func TestVanityPages(t *testing.T) {
 			t.Errorf("%s: %v (run: go test -run TestVanityPages -update-vanity .)", file, err)
 			continue
 		}
-		if string(got) != content {
+		// Windows checkouts may turn the pages' line endings into CRLF; the site is built from LF files.
+		if strings.ReplaceAll(string(got), "\r\n", "\n") != content {
 			t.Errorf("%s is out of date (run: go test -run TestVanityPages -update-vanity .)", file)
 		}
 	}

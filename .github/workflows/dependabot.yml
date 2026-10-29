@@ -9,7 +9,7 @@ permissions:
   pull-requests: write
 jobs:
   automerge:
-    if: github.event.pull_request.user.login == 'dependabot[bot]' && github.repository == 'DABH/localizer'
+    if: github.event.pull_request.user.login == 'dependabot[bot]' && github.repository == 'snizyx/localizer'
     runs-on: ubuntu-latest
     steps:
       - run: gh pr merge --auto --squash "$PR"

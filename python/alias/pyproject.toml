@@ -22,7 +22,7 @@ classifiers = [
 [project.urls]
 Homepage = "https://locale.dev/"
 "Use instead" = "https://pypi.org/project/localizer/"
-Source = "https://github.com/DABH/localizer"
+Source = "https://github.com/snizyx/localizer"
 
 [tool.hatch.version]
 source = "vcs"

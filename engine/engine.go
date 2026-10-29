@@ -17,7 +17,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/DABH/localizer/msgfmt"
+	"locale.dev/localizer/msgfmt"
 )
 
 // Mode selects how aggressively composite strings are split.

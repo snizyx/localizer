@@ -17,8 +17,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/DABH/localizer"
-	"github.com/DABH/localizer/examples/demo/locales"
+	"locale.dev/localizer"
+	"locale.dev/localizer/examples/demo/locales"
 )
 
 type task struct {

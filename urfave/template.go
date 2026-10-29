@@ -11,7 +11,7 @@ import (
 
 	"github.com/urfave/cli/v3"
 
-	"github.com/DABH/localizer/msgfmt"
+	"locale.dev/localizer/msgfmt"
 )
 
 // templates holds urfave/cli's package-level help templates as they were before Localize translated them.

@@ -12,8 +12,8 @@ import (
 
 	"github.com/alecthomas/kong"
 
-	"github.com/DABH/localizer"
-	"github.com/DABH/localizer/kongx"
+	"locale.dev/localizer"
+	"locale.dev/localizer/kongx"
 )
 
 // grammar is a small task CLI: two commands, a grouped one, flags, a positional argument and a help string

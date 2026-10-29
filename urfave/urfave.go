@@ -29,8 +29,8 @@ import (
 
 	"github.com/urfave/cli/v3"
 
-	"github.com/DABH/localizer"
-	"github.com/DABH/localizer/msgfmt"
+	"locale.dev/localizer"
+	"locale.dev/localizer/msgfmt"
 )
 
 // Localize renders cmd's help and errors in the user's language. Call it on the root command right before

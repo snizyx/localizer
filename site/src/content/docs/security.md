@@ -79,5 +79,5 @@ at locale.dev).
 ## Reporting a vulnerability
 
 Please report vulnerabilities privately through
-[GitHub’s security advisories](https://github.com/DABH/localizer/security/advisories/new), not in public
+[GitHub’s security advisories](https://github.com/snizyx/localizer/security/advisories/new), not in public
 issues.

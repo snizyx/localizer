@@ -16,9 +16,9 @@ import (
 
 	"github.com/alecthomas/kong"
 
-	"github.com/DABH/localizer"
-	"github.com/DABH/localizer/examples/kong-demo/locales"
-	"github.com/DABH/localizer/kongx"
+	"locale.dev/localizer"
+	"locale.dev/localizer/examples/kong-demo/locales"
+	"locale.dev/localizer/kongx"
 )
 
 type task struct {

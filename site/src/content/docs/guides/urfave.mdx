@@ -3,7 +3,7 @@ title: urfave/cli
 description: Localize a urfave/cli v3 application with one line, what gets translated, and what the adapter changes.
 ---
 
-The `github.com/DABH/localizer/urfave` package renders a [urfave/cli](https://github.com/urfave/cli) v3
+The `locale.dev/localizer/urfave` package renders a [urfave/cli](https://github.com/urfave/cli) v3
 application's help, usage errors and built-in messages in the user's language. The catalogs are the same
 `locales/*.json` files as for every other framework; the service writes them, and your binary embeds them.
 
@@ -17,8 +17,8 @@ import (
 
 	"github.com/urfave/cli/v3"
 
-	"github.com/DABH/localizer"
-	"github.com/DABH/localizer/urfave"
+	"locale.dev/localizer"
+	"locale.dev/localizer/urfave"
 	"example.com/yourcli/locales"
 )
 

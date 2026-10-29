@@ -128,4 +128,4 @@ def pytest_configure(config):
 - Documentation: https://locale.dev/ — [runtime reference](https://locale.dev/reference/runtime/),
   [integration guide](https://locale.dev/guides/integration/)
 - Coding agents: point yours at https://locale.dev/AGENTS.md to integrate Localizer into a CLI
-- Source: https://github.com/DABH/localizer (`python/`); license: NCSA
+- Source: https://github.com/snizyx/localizer (`python/`); license: NCSA

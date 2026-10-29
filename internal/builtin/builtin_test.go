@@ -6,8 +6,8 @@ package builtin
 import (
 	"testing"
 
-	"github.com/DABH/localizer/catalog"
-	"github.com/DABH/localizer/msgfmt"
+	"locale.dev/localizer/catalog"
+	"locale.dev/localizer/msgfmt"
 )
 
 // Every framework directory translates the same set of strings into the same languages, with intact

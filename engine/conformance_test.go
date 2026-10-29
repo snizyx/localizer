@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/DABH/localizer/msgfmt"
+	"locale.dev/localizer/msgfmt"
 )
 
 // TestConformanceEngine runs testdata/conformance/engine.json, which the Python runtime runs too (its

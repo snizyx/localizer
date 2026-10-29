@@ -11,7 +11,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 
-	"github.com/DABH/localizer/engine"
+	"locale.dev/localizer/engine"
 )
 
 // DumpEntry is one help string found in a command tree (LOCALIZER_DUMP output).

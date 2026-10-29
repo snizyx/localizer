@@ -13,7 +13,7 @@ import (
 
 	"github.com/urfave/cli/v3"
 
-	"github.com/DABH/localizer"
+	"locale.dev/localizer"
 )
 
 const jaCatalog = `{"version": 1, "language": "ja", "messages": {

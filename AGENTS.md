@@ -3,7 +3,7 @@
 Localizer renders a command-line tool's own strings — help text, option descriptions, messages, errors,
 prompts — in the user's language. Translations are JSON catalogs kept in the CLI's repository: a hosted
 service (GitHub App or GitHub Action) writes and maintains them through pull requests, and a small runtime
-library (Go: `github.com/DABH/localizer`; Python: `localizer` on PyPI) applies them when the CLI runs. Nothing is
+library (Go: `locale.dev/localizer`; Python: `localizer` on PyPI) applies them when the CLI runs. Nothing is
 downloaded at runtime, and English output is unchanged.
 
 This file has two audiences: agents integrating Localizer into **another** repository (next section), and
@@ -20,9 +20,9 @@ fails validation is replaced on the next run).
 
 - **Go + Cobra** (`github.com/spf13/cobra` in `go.mod`): one line, `localizer.Localize(root, locales.FS)`.
 - **Go + kong** (`github.com/alecthomas/kong`): one extra argument, `kong.Parse(&cli, kongx.Localize(locales.FS))`
-  (package `github.com/DABH/localizer/kongx`; also on `kong.Must` and `kong.New`, after any `kong.Writers`).
+  (package `locale.dev/localizer/kongx`; also on `kong.Must` and `kong.New`, after any `kong.Writers`).
 - **Go + urfave/cli v3** (`github.com/urfave/cli/v3`): one line, `urfave.Localize(cmd, locales.FS)` on the root
-  command right before `cmd.Run` (package `github.com/DABH/localizer/urfave`). v2 (`cli.App`) is not supported.
+  command right before `cmd.Run` (package `locale.dev/localizer/urfave`). v2 (`cli.App`) is not supported.
 - **Python + Typer, Click or argparse** (`pyproject.toml`, `setup.py` or `setup.cfg`): one line,
   `localizer.localize(app, "yourcli.locales")`.
 - Other Go or Python CLIs: `localizer.Init(locales.FS)` / `localizer.init("yourcli.locales")` plus the
@@ -34,7 +34,8 @@ backend (`[build-system]` in `pyproject.toml`: hatchling, poetry, flit, pdm, uv 
 
 ### 2. Add the dependency
 
-- Go: `go get github.com/DABH/localizer@latest && go mod tidy`.
+- Go: `go get locale.dev/localizer@latest && go mod tidy`. A CLI that imports the old path
+  `github.com/DABH/localizer` (before v0.7.0) changes its imports to `locale.dev/localizer` first.
 - Python: add `localizer` with the project's own tool so lock files stay consistent: `uv add localizer`,
   `poetry add localizer`, or add it to `[project] dependencies` in `pyproject.toml` and regenerate
   `uv.lock` / `poetry.lock` / `requirements*.txt`. The import name is also `localizer`.
@@ -75,7 +76,7 @@ Never in tests, documentation generators or linters that build the command tree 
 
 ```go
 import (
-	"github.com/DABH/localizer"
+	"locale.dev/localizer"
 	"example.com/yourcli/locales"
 )
 
@@ -189,7 +190,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: DABH/localizer/action@v0.6.0
+      - uses: snizyx/localizer/action@v0.7.0
 ```
 
 (and tell the user to enable **Settings → Actions → General → Allow GitHub Actions to create and approve

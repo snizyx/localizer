@@ -14,8 +14,8 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 
-	"github.com/DABH/localizer/engine"
-	"github.com/DABH/localizer/msgfmt"
+	"locale.dev/localizer/engine"
+	"locale.dev/localizer/msgfmt"
 )
 
 // Localize translates a Cobra command tree in place: every command's Short, Long, Example and

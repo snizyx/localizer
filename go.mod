@@ -1,4 +1,4 @@
-module github.com/DABH/localizer
+module locale.dev/localizer
 
 go 1.25.0
 

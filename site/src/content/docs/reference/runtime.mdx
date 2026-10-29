@@ -10,14 +10,15 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 <Tabs syncKey="lang">
 <TabItem label="Go">
 ```sh
-go get github.com/DABH/localizer
+go get locale.dev/localizer
 ```
 
 The root package depends on Cobra (v1.8 or later), pflag, `golang.org/x/text` and `golang.org/x/sys`; the
 `kongx` and `urfave` subpackages add kong and urfave/cli v3 respectively (see the [kong](../../guides/kong/) and
 [urfave/cli](../../guides/urfave/) guides). The library makes no network calls, and it has no telemetry or
 credentials. The full API is on
-[pkg.go.dev](https://pkg.go.dev/github.com/DABH/localizer).
+[pkg.go.dev](https://pkg.go.dev/locale.dev/localizer). Until v0.6 the module path was `github.com/DABH/localizer`;
+from v0.7.0 it is `locale.dev/localizer`, so a CLI that upgrades changes its imports.
 
 ### Functions
 

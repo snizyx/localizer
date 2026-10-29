@@ -32,11 +32,11 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/DABH/localizer/catalog"
-	"github.com/DABH/localizer/engine"
-	"github.com/DABH/localizer/internal/builtin"
-	"github.com/DABH/localizer/internal/locale"
-	"github.com/DABH/localizer/msgfmt"
+	"locale.dev/localizer/catalog"
+	"locale.dev/localizer/engine"
+	"locale.dev/localizer/internal/builtin"
+	"locale.dev/localizer/internal/locale"
+	"locale.dev/localizer/msgfmt"
 )
 
 // EnvLang is the environment variable that overrides language detection for every Localizer-enabled CLI.

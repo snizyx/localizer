@@ -24,8 +24,8 @@ export default defineConfig({
 				{ tag: 'meta', attrs: { property: 'og:image:alt', content: 'Localizer: your CLI, in your users’ language' } },
 				{ tag: 'meta', attrs: { name: 'twitter:image', content: 'https://locale.dev/og.png' } },
 			],
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/DABH/localizer' }],
-			editLink: { baseUrl: 'https://github.com/DABH/localizer/edit/main/site/' },
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/snizyx/localizer' }],
+			editLink: { baseUrl: 'https://github.com/snizyx/localizer/edit/main/site/' },
 			customCss: ['./src/styles/custom.css'],
 			components: { Footer: './src/components/Footer.astro' },
 			sidebar: [

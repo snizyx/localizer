@@ -14,8 +14,8 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/DABH/localizer/catalog"
-	"github.com/DABH/localizer/internal/locale"
+	"locale.dev/localizer/catalog"
+	"locale.dev/localizer/internal/locale"
 )
 
 //go:embed */*.json

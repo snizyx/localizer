@@ -24,7 +24,7 @@ import (
 
 	"github.com/alecthomas/kong"
 
-	"github.com/DABH/localizer"
+	"locale.dev/localizer"
 )
 
 // Localize returns a kong option that renders the application's help and errors in the user's language.

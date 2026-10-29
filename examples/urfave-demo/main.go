@@ -18,9 +18,9 @@ import (
 
 	"github.com/urfave/cli/v3"
 
-	"github.com/DABH/localizer"
-	"github.com/DABH/localizer/examples/urfave-demo/locales"
-	"github.com/DABH/localizer/urfave"
+	"locale.dev/localizer"
+	"locale.dev/localizer/examples/urfave-demo/locales"
+	"locale.dev/localizer/urfave"
 )
 
 type task struct {

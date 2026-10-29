@@ -9,7 +9,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const cla = require('./cla.js');
 
-const repo = { owner: 'DABH', repo: 'localizer' };
+const repo = { owner: 'snizyx', repo: 'localizer' };
 const maintainer = { id: 1920464, login: 'DABH', type: 'User' };
 const alice = { id: 11, login: 'alice', type: 'User' };
 const bob = { id: 12, login: 'bob', type: 'User' };
@@ -93,7 +93,7 @@ function commented(user, body) {
 		repo,
 		payload: {
 			issue: { number: 7, pull_request: {} },
-			comment: { user, body, created_at: '2026-09-26T12:00:00Z', html_url: 'https://github.com/DABH/localizer/pull/7#c1' },
+			comment: { user, body, created_at: '2026-09-26T12:00:00Z', html_url: 'https://github.com/snizyx/localizer/pull/7#c1' },
 			repository: { default_branch: 'main' },
 		},
 	};
@@ -115,7 +115,7 @@ test('an unsigned contributor gets a pending status and one comment', async () =
 	await cla.run({ github, context: opened(pr), core }); // a new push must not add a second comment
 	assert.equal(lastStatus(state).state, 'pending');
 	assert.equal(lastStatus(state).description, 'Waiting for 2 signatures');
-	assert.match(lastStatus(state).target_url, /\/DABH\/localizer\/blob\/main\/CLA\.md$/);
+	assert.match(lastStatus(state).target_url, /\/snizyx\/localizer\/blob\/main\/CLA\.md$/);
 	assert.equal(state.comments.length, 1);
 	assert.match(state.comments[0].body, /Waiting for: @alice, @bob/);
 	assert.ok(state.comments[0].body.includes(cla.SIGN_PHRASE));
@@ -131,7 +131,7 @@ test('signing records the signature and turns the check green', async () => {
 			login: 'alice',
 			signed_at: '2026-09-26T12:00:00Z',
 			pull_request: 7,
-			comment_url: 'https://github.com/DABH/localizer/pull/7#c1',
+			comment_url: 'https://github.com/snizyx/localizer/pull/7#c1',
 		},
 	]);
 	assert.equal(lastStatus(state).state, 'success');

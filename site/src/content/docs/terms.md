@@ -5,14 +5,14 @@ tableOfContents: false
 editUrl: false
 ---
 
-_Last updated: October 2, 2026_
+_Last updated: October 28, 2026_
 
 These terms govern the hosted Localizer service (the **Service**): the Localizer GitHub App, the API at
 `api.locale.dev` that the Localizer GitHub Action calls, and the translations they produce. The Service is
 operated by **Snizyx Software LLC**, a Wyoming limited liability company ("**we**", "**us**"). You can reach
 us at [saluton@locale.dev](mailto:saluton@locale.dev).
 
-The Localizer runtime libraries (the Go module `github.com/DABH/localizer` and the Python package
+The Localizer runtime libraries (the Go module `locale.dev/localizer`, formerly `github.com/DABH/localizer`, and the Python package
 `localizer`) are open source under the University of Illinois/NCSA license. That license, not these terms,
 governs them.
 
@@ -96,7 +96,7 @@ You may not:
 - get around plan limits, eligibility rules or the one-account scope of a subscription, for example by moving
   repositories between accounts to share a subscription;
 - interfere with or disrupt the Service, or probe it for vulnerabilities outside our
-  [security policy](https://github.com/DABH/localizer/security/policy);
+  [security policy](https://github.com/snizyx/localizer/security/policy);
 - use the Service to process anything other than your software's own user-facing strings, or content that is
   unlawful;
 - resell the Service.

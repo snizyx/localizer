@@ -4,7 +4,7 @@ description: One option localizes a kong CLI’s help, flag and argument descrip
 ---
 
 [kong](https://github.com/alecthomas/kong) describes a CLI with struct tags. Localizer’s adapter for it is the
-package `github.com/DABH/localizer/kongx`: its one option does for kong what `localizer.Localize` does for
+package `locale.dev/localizer/kongx`: its one option does for kong what `localizer.Localize` does for
 Cobra. The catalogs, the service that maintains them and the language selection are the same; this page
 covers what differs.
 
@@ -14,7 +14,7 @@ covers what differs.
 import (
 	"github.com/alecthomas/kong"
 
-	"github.com/DABH/localizer/kongx"
+	"locale.dev/localizer/kongx"
 	"example.com/yourcli/locales"
 )
 

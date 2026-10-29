@@ -10,7 +10,7 @@ Go with Cobra, kong or urfave/cli; Python with Typer, Click or argparse.
 
 ```go
 import (
-	"github.com/DABH/localizer"
+	"locale.dev/localizer"
 	"example.com/yourcli/locales"
 )
 
@@ -23,8 +23,10 @@ func main() {
 }
 ```
 
-kong: `kong.Parse(&cli, kongx.Localize(locales.FS))` (package `github.com/DABH/localizer/kongx`).
-urfave/cli v3: `urfave.Localize(cmd, locales.FS)` right before `cmd.Run` (package `github.com/DABH/localizer/urfave`).
+kong: `kong.Parse(&cli, kongx.Localize(locales.FS))` (package `locale.dev/localizer/kongx`).
+urfave/cli v3: `urfave.Localize(cmd, locales.FS)` right before `cmd.Run` (package `locale.dev/localizer/urfave`).
+
+The Go module is `locale.dev/localizer`; until v0.6 it was `github.com/DABH/localizer`.
 
 ```python
 import localizer  # pip install localizer

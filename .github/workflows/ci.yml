@@ -98,7 +98,7 @@ jobs:
           - { os: windows-latest, python: "3.13", deps: "typer==0.17.3 click==8.1.8 rich==14.0.0 rich-click==1.9.9" }
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: astral-sh/setup-uv@18d369b23da25a81e9458561248e1aafff6a70fa # v10.3.1
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
       - name: Install
         shell: bash
         run: |

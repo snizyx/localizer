@@ -73,8 +73,8 @@ Localizer is built so that adopting it adds as little risk as possible for CLI m
 Localizer doesn’t have a SOC 2 report yet. The design keeps the scope small: public data only, no end-user
 data, no customer secrets, no retained source, infrastructure as code, least-privilege IAM, encryption at
 rest and in transit, and audit logging. The subprocessors are AWS (hosting, and Claude through Amazon
-Bedrock), GitHub (source access and pull requests) and Spaceship (email forwarding for the support addresses
-at locale.dev).
+Bedrock), GitHub (source access and pull requests), Mixpanel (product analytics for the service, with
+pseudonymous account IDs) and Spaceship (email forwarding for the support addresses at locale.dev).
 
 ## Reporting a vulnerability
 

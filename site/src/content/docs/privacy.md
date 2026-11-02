@@ -5,7 +5,7 @@ tableOfContents: false
 editUrl: false
 ---
 
-_Last updated: October 2, 2026_
+_Last updated: November 1, 2026_
 
 This policy explains what data Localizer collects and why. Localizer is operated by **Snizyx Software
 LLC**, a Wyoming limited liability company ("**we**", "**us**"). Contact us at
@@ -48,6 +48,27 @@ To translate, we send the extracted strings, together with context such as the c
 from, to Claude models made by Anthropic, running on Amazon Bedrock in AWS. Under Amazon Bedrock's
 data-protection terms, these inputs and outputs aren't used to train models or shared with the model provider.
 
+## Service analytics
+
+The hosted service reports how it is used to [Mixpanel](https://mixpanel.com), a product analytics provider, so
+that we can see which parts of it work and improve them. Our servers send these events directly: nothing runs
+in your browser, your repository or your command-line tool for this, Mixpanel doesn't see your IP address, and
+we ask it not to derive a location.
+
+- **What is sent:** the numeric ID of the GitHub account, which identifies the account pseudonymously; the name
+  and time of the event (the GitHub App was installed, a repository was onboarded, an onboarding pull request
+  was merged, a job completed, an account was refused for lack of a subscription, a checkout was started, a
+  subscription became active); the plan status, meaning whether the account is on a paid plan, where we know
+  it, and which plan was chosen, for a checkout or a subscription; and fixed labels: which product and
+  environment the event comes from, whether a refusal came through the API or the GitHub App, and whether the
+  account is one of ours.
+- **What is never sent:** account or repository names, email addresses, source code, strings or translations,
+  catalog contents, costs, or error messages.
+
+Mixpanel keeps these events for two years. To opt out, email
+[saluton@locale.dev](mailto:saluton@locale.dev) with the name of the GitHub account: we stop sending events for
+it and ask Mixpanel to delete those already sent. Opting out changes nothing about the Service.
+
 ## Subscriptions
 
 Purchases are processed by [Polar](https://polar.sh), our merchant of record, which collects your name, email
@@ -64,8 +85,8 @@ When you email us, we keep the correspondence as long as needed to answer you an
 ## Why we process this data
 
 We process this data to provide the Service you asked for (for users in the EU and the UK: to perform our
-contract with you), to keep the Service secure and prevent abuse (our legitimate interests), and to meet legal
-obligations such as tax and accounting rules.
+contract with you), to keep the Service secure and prevent abuse and to understand how it is used so that we can
+improve it (our legitimate interests), and to meet legal obligations such as tax and accounting rules.
 
 ## Who else processes it
 
@@ -76,6 +97,7 @@ subprocessors):
 | --- | --- |
 | Amazon Web Services | Hosting in the United States (us-east-2), the website, and translation models on Amazon Bedrock |
 | GitHub | Repositories, the GitHub App and the GitHub Action |
+| Mixpanel | Product analytics for the hosted service (see Service analytics above) |
 | Spaceship | Email forwarding for the support addresses at locale.dev |
 
 Polar, our merchant of record, processes your purchase as an independent controller under its own privacy
